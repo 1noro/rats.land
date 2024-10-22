@@ -5,6 +5,7 @@ draft: false
 tags: ["lecturas", "filosofía", "reflexión"]
 summary: "He visto una charla sobre Estoicismo y me ha entrado ganas de leer sobre el tema."
 displaySummary: false
+authors: ["Inoro"]
 ---
 
 En un mundo lleno de incertidumbre y cambio constante, cada vez más personas están buscando formas de encontrar estabilidad y sentido en sus vidas. Una filosofía antigua que ha resurgido en popularidad en los últimos años debido a su enfoque en la ética, la autodisciplina y el autocontrol es el estoicismo. Esta corriente de pensamiento ha sido abrazada por muchas personas como una forma de vivir una vida más significativa y plena en un mundo cada vez más complejo.

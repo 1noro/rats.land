@@ -9,6 +9,7 @@ tags: ["anime", "series", "cultura asiática"]
 image: "cover.webp"
 summary: "Cowboy Bebop — Japón, Shinichirō Watanabe (1998-1999) es una serie ambientada en el año 2071, en un futuro en el que la humanidad ha colonizado el sistema solar, y sigue las aventuras de un grupo de cazarrecompensas a bordo de la nave espacial Bebop."
 displaySummary: false
+authors: ["Inoro"]
 ---
 
 Cowboy Bebop — Japón, Shinichirō Watanabe (1998-1999) es una serie ambientada en el año 2071, en un futuro en el que la humanidad ha colonizado el sistema solar, y sigue las aventuras de un grupo de cazarrecompensas a bordo de la nave espacial Bebop.{{< footnoteRef number="1" >}}

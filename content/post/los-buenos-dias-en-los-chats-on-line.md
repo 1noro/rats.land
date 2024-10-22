@@ -7,6 +7,7 @@ draft: false
 tags: ["internet", "reflexión"]
 summary: "¿Quién se atreve a decir \"Buenos días\" en un chat on-line?"
 displaySummary: false
+authors: ["Inoro"]
 ---
 
 Nos ponemos en situación; tú estás en un chat en el que puedes, o no, conocer a todos los integrantes, pongamos que te levantas a las 6:00 AM (típica hora rutinaria durante el curso escolar) y como no hay mensajes nuevos y, aludiendo Calderón "_o calla o algo di que mejor que callar sea_", te quedarás calladito. Opino que a las 6:00 AM no tienes nada interesante que quieras o puedas decir.

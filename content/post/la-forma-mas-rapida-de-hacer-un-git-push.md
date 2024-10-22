@@ -7,6 +7,7 @@ draft: false
 tags: ["git", "shell"]
 summary: "Subir tus cambios de un repositorio git a un origen remoto de forma rápida y sencilla."
 displaySummary: false
+authors: ["Inoro"]
 ---
 
 Estos tres comandos, que se deben copiar y pegar en bloque, son la forma más sencilla para subir tus cambios de un repositorio git a un origen remoto, como *GitHub*, *GitLab*, etc. ---Como requisito previo, se debe haber configurado el usuario y el correo electrónico. Y situar la terminal en la carpeta raíz del repositorio (la primera)---.

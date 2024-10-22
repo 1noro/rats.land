@@ -14,7 +14,7 @@
 					Por {{ with .Params.author }}
 					<a href="/{{ . | urlize }}">{{ . }}</a>
 					{{ else }}
-					<a href="/{{ .Site.Author.name | urlize }}">{{ .Site.Author.name }}</a>
+					<a href="/{{ index .Params.authors 0 | urlize }}">{{ index .Params.authors 0 }}</a>
 					{{ end }}
 				</span> · <time datetime="{{ .Date.Format "2006-01-02T15:04:05-07:00" }}">{{ .Date | time.Format ":date_long" }}</time> · <span class="post_tags" aria-label="Etiquetas">
 					{{ range (.GetTerms "tags") }}

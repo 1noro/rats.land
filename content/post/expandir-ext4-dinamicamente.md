@@ -5,6 +5,7 @@ draft: false
 # tags: ["linux", "comandos", "ext4", "particiones", "discos"]
 tags: ["linux", "shell"]
 summary: "Aumentar el tamaño de una partición EXT4 sin tener que formatear el disco duro."
+authors: ["Inoro"]
 ---
 
 El sistema de archivos EXT4 te permite redimensionar las particiones de

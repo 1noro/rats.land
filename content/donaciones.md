@@ -3,6 +3,7 @@ title: "Donaciones"
 draft: false
 summary: "Invítame a un café."
 displaySummary: false
+authors: ["Inoro"]
 ---
 
 Puedes apoyar este sitio, si te apetece, con las siguientes

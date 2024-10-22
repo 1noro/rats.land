@@ -5,6 +5,7 @@ draft: false
 summary: "Listado de programas que componen mi workflow."
 displaySummary: false
 image: "images/gnu-1300.jpg"
+authors: ["Inoro"]
 ---
 
 <!-- todo: actualizar, no refleja la realidad -->

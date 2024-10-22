@@ -8,6 +8,7 @@ draft: false
 tags: ["sueños"]
 summary: "Transcripción de un sueño que tuve hace unos años."
 displaySummary: false
+authors: ["Inoro"]
 ---
 
 Voy a transcribir un sueño que tuve la noche del 22 de octubre de 2018. Aunque últimamente no consigo acordarme de mis sueños, me gusta escribir los pocos que recuerdo en una suerte de diario, y como este me resultó especialmente teatral, me parece lo suficientemente interesante como para presentarlo aquí. Antes de proceder a la narración debo hacer notar que en el diario, al comienzo de la transcripción, hay una nota que indica que la narración está desordenada, sea lo que sea lo que quiera decir eso.

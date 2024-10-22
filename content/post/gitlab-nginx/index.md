@@ -8,6 +8,7 @@ draft: false
 tags: ["git", "nginx", "linux"]
 summary: "Voy a documentar el proceso de instalación de Gitlab en una máquina virtual detrás de un Nginx reverse proxy."
 displaySummary: false
+authors: ["Inoro"]
 ---
 
 Voy a documentar el proceso de instalación de Gitlab en una máquina

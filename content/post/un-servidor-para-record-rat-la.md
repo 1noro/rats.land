@@ -6,6 +6,7 @@ draft: false
 tags: ["nginx", "php", "web", "linux"]
 summary: "Configuración de un servidor web Nginx con PHP-fpm en Debian 10."
 displaySummary: false
+authors: ["Inoro"]
 ---
 
 > *Nota: esta publicación está desactualizada y no se corresponde con la

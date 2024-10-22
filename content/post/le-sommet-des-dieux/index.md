@@ -9,6 +9,7 @@ tags: ["cine", "anime", "cultura asiática"]
 image: "le-sommet-des-dieux-750.jpg"
 featuredImage: false
 summary: "Le Sommet des Dieux — Francia, Patrick Imbert (2021) es una película que me ha tocado la fibra sensible y me ha dejado con ganas de más historias de alpinismo."
+authors: ["Inoro"]
 ---
 
 Adaptación francesa del manga homónimo escrito por Jiro Taniguchi que narra la historia de Makoto Fukamachi, un aventurero y fotógrafo japonés que sigue el rastro de un misterioso alpinista debido a la sospecha de que este podría tener bajo su custodia una cámara perteneciente a [George Mallory](https://es.wikipedia.org/wiki/George_Leigh_Mallory). El revelado de ese carrete podría desvelar el misterio de si Mallory efectivamente llegó a la cima del Everest en 1924 antes de desaparecer para siempre, 29 años antes del primer ascenso oficial.

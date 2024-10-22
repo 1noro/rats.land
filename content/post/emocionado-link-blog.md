@@ -6,6 +6,7 @@ draft: false
 tags: ["web", "internet", "reflexión"]
 summary: "Me emociona mucho poder compartir con vosotros un nuevo proyecto, un link blog en Gemini y Gopher."
 displaySummary: false
+authors: ["Inoro"]
 ---
 
 Últimamente sentía cierta presión porque tenía muchas ganas de retomar

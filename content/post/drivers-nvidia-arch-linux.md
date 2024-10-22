@@ -8,6 +8,7 @@ draft: false
 tags: ["linux"]
 summary: "Configurar los drivers de Nvidia en Arch Linux con Gnome y Xorg."
 displaySummary: false
+authors: ["Inoro"]
 ---
 
 Yo antes solo utilizaba mi fabulosa tarjeta gráfica integrada de **Intel

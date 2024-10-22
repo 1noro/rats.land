@@ -5,6 +5,7 @@ summary: "Aquí intentaré aclarar algunas de las cuestiones que, se me ocurre, 
 displaySummary: false
 image: "images/faq-rats-1024.jpg"
 featuredImage: false
+authors: ["Inoro"]
 ---
 
 Aquí intentaré aclarar algunas de las cuestiones que, se me ocurre, pueden surgir a la hora de visitar esta web. Por otra parte, si lo que quieres es que responda a las grandes cuestiones de la raza humana, lo que tienes que hacer es leer las publicaciones. ¿A qué estás esperando? Todas las respuestas a tus inquietudes están a un [*click*]({{< relref "post" >}}) de distancia.

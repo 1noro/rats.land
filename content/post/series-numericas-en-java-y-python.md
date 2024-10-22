@@ -7,6 +7,7 @@ draft: false
 tags: ["java", "python"]
 summary: "Ejemplos de código en Java y Python para resolver algunas series numéricas que me han propuesto en clase."
 displaySummary: false
+authors: ["Inoro"]
 ---
 
 Ejemplos de código en Java y Python para resolver algunas series numéricas que me han propuesto en clase. ---Para este ejemplo tomaré como regla que todas las listas serán de 100 elementos como máximo---.

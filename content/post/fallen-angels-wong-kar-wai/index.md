@@ -10,6 +10,7 @@ draft: false
 tags: ["cine", "cultura asiática"]
 image: "fallen-angels-1300-2.jpg"
 summary: "Fallen Angels — Hong Kong, Wong Kar-Wai (1995) es una película cautivadora y original que combina elementos de cine noir con un enfoque innovador y experimental."
+authors: ["Inoro"]
 ---
 
 No sé por qué llevaba esquivando esta película desde hace varios años. Ronda mis listas de “películas que quiero ver” desde que vi Deseando Amar (2000). Más tarde un par de personas me la recomendaron muy efusivamente, asegurando que me encantaría, y yo, siguiendo mi costumbre de solo ver lo que me apetece en cada momento, no les hice ni caso. Hasta hoy, día en que después de un largo recorrido por FilmAffinity buscando qué ver esta noche, mi hermana me propuso esta película. Sin duda todos tenían razón, la película me ha encantado, me gusta tanto que me ha quitado el sueño y me ha dado fuerzas para escribir este artículo. ¿Por dónde empezaré?

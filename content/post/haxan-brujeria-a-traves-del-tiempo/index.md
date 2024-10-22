@@ -8,6 +8,7 @@ draft: false
 tags: ["documental", "cine", "b&w"]
 image: "haxan-1300.jpg"
 summary: "Häxan — Suecia, Benjamin Christensen (1922) es un documental mudo que recorre la historia de la brujería a través de los tiempos."
+authors: ["Inoro"]
 ---
 
 {{< imgLandscape src="haxan-1300.jpg" alt="Recreación de una ensoñación en un pasaje del film." >}}

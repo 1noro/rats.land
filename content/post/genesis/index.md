@@ -9,6 +9,7 @@ tags: ["web", "php", "html", "css", "javascript"]
 summary: "Intentaré reflexionar sobre el origen de esta web, su estructura y su estilo."
 displaySummary: false
 image: "genesis-2001-1190.jpg"
+authors: ["Inoro"]
 ---
 
 > *Nota: esta publicación está desactualizada y no se corresponde con cómo ha acabado siendo esta web. Sin embargo, sigue siendo ilustrativa a la hora de explicar las razones por las que comencé este proyecto, y basándonos en este podrá verse cómo ha evolucionado desde la idea original. En [esta sección de las FAQ]({{< relref "faq#por-que" >}}) explico el porqué de la migración de dominio.*

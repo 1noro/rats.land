@@ -6,6 +6,7 @@ summary: "Sobre Inoro, el autor de este blog"
 displaySummary: false
 image: "images/profile.webp"
 featuredImage: false
+authors: ["Inoro"]
 ---
 
 Joven muchacho entusiasta de las redes, la programación y el mundo del

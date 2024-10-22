@@ -6,15 +6,18 @@ title = 'rats.land'
 theme = 'hugo-theme-ratsland-bookstyle'
 enableRobotsTXT = true
 enableGitInfo = true
-Paginate = 50
+# Paginate = 50 # deprecated
 copyright = 'Esta obra está bajo una Licencia Creative Commons BY-SA-4.0. Y el código HTML y CSS bajo la GNU GPL v3.'
 rssLimit = 15
+
+[pagination]
+pagerSize = 50
 
 [markup.goldmark.renderer]
 unsafe = true
 
-[author]
-  name = 'Inoro'
+# [author]
+#   name = 'Inoro'
 
 [Params]
   webRepo = 'https://github.com/1noro/rats.land'
@@ -39,6 +42,7 @@ unsafe = true
 [taxonomies]
   tag = 'tags'
   # category = 'categories'
+  author = "authors"
 
 [deployment]
 # By default, files are uploaded in an arbitrary order.

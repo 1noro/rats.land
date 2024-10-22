@@ -4,6 +4,7 @@ draft: false
 summary: "Intentaré describir de la forma más clara posible el motivo de esta web."
 displaySummary: false
 image: "images/rat-la-la-la.jpg"
+authors: ["Inoro"]
 ---
 
 Hola, me presento, puedes llamarme [Inoro]({{< relref "inoro" >}}). La página `rats.land` es un blog/web personal autogestionado donde iré registrando mis proyectos y mis líos mentales.

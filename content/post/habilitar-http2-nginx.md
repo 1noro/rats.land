@@ -5,6 +5,7 @@ draft: false
 tags: ["nginx", "linux"]
 summary: "Aumentar la eficiencia y la seguridad de una web con el protocolo HTTP/2."
 displaySummary: false
+authors: ["Inoro"]
 ---
 
 Utilizando la configuración de Nginx ya explicada en [este artículo]({{< relref "post/un-servidor-para-record-rat-la" >}}) para

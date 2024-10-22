@@ -2,6 +2,7 @@
 title: "rats.land"
 draft: false
 summary: "Bienvenido a rats.land, donde un servidor, junto a las ratas del cementerio de Salem, registran sus desvaríos mentales."
+authors: ["Inoro"]
 ---
 
 {{< blockMediaText src="images/rats-in-salem.webp" alt="Un puñado de ratas preguntándose cosas." >}}

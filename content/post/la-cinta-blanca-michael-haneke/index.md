@@ -8,6 +8,7 @@ draft: false
 tags: ["cine", "b&w"]
 image: "la-cinta-blanca-1300.jpg"
 summary: "Das Weisse Band — Alemania, Michael Haneke (2009) es una película que nos presenta una reflexión sobre la maldad humana que durante su visionado te arranca más de un escalofrío."
+authors: ["Inoro"]
 ---
 
 {{< imgLandscape src="la-cinta-blanca-1300.jpg" alt="Sebastian Hülk descarga su ira contra los repollos del barón." >}}

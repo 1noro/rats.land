@@ -9,6 +9,7 @@ tags: ["cine", "b&w", "cultura asiática"]
 summary: "Yojimbo (用心棒) — Japón, Akira Kurosawa (1961) es una película de acción japonesa ambientada en el Japón feudal, en la que un rōnin juega a dos bandas en la guerra entre dos familias."
 image: "yojimbo-375.jpg"
 featuredImage: false
+authors: ["Inoro"]
 ---
 
 Sanjuro, un [rōnin](https://es.wikipedia.org/wiki/R%C5%8Dnin) interpretado por Toshiro Mifune, llega a un pueblo desolado bajo el conflicto contínuo entre
