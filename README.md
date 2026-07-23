@@ -27,7 +27,7 @@ $ make new CONTENT=post/mi-post.md   # crea una entrada nueva
 $ make clean      # borra public/ y resources/
 ```
 
-Variables sobreescribibles, por ejemplo: `make server PORT=8080` o
+Variables sobrescribibles, por ejemplo: `make server PORT=8080` o
 `make build HUGO_VERSION=0.165.0`.
 
 ## Temas de HUGO que me gustan
