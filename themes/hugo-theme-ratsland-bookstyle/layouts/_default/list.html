@@ -15,7 +15,13 @@
 		{{ end }} -->
 	</header>
 	<div class="container post__entryContent">
-		{{ if in .Permalink "/post/" }}
+		{{ if eq .Kind "taxonomy" }}
+		<ul class="tagList">
+			{{ range .Pages.ByTitle }}
+			<li><a href="{{ .RelPermalink }}">{{ .Title }}</a> ({{ len .Pages }})</li>
+			{{ end }}
+		</ul>
+		{{ else if in .Permalink "/post/" }}
 		{{ range .Pages.GroupByDate "2006" }}
 		<!-- <h2>~ <span class="uppercase">{{ .Key }}</span> ~</h2> -->
 		<h2><span class="uppercase">{{ .Key }}</span></h2>
