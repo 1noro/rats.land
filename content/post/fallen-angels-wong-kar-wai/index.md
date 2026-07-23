@@ -2,8 +2,6 @@
 title: "Fallen Angels, neo noir en Hong Kong"
 mainTitle: "Fallen Angels"
 subtitle: "Neo noir en Hong Kong"
-mainTitle: "Fallen Angels"
-subtitle: "Neo noir en Hong Kong"
 date: 2023-03-18T01:09:00+01:00
 draft: false
 # tags: ["cine", "hong kong", "Wong Kar-Wai", "neo noir", "china"]
