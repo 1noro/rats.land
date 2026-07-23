@@ -20,7 +20,7 @@ copyright = 'Esta obra está bajo una Licencia Creative Commons BY-SA-4.0. Y el 
 [markup.goldmark.renderer]
 unsafe = true
 
-[Params]
+[params]
   webRepo = 'https://github.com/1noro/rats.land'
   description = 'rats.land'
   github = 'https://github.com/1noro'
