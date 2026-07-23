@@ -1,20 +1,24 @@
 baseURL = 'https://rats.land/'
-languageCode = 'es-ES'
+# `languageCode` quedó deprecada en Hugo v0.158.0; su sustituta es `locale`.
+locale = 'es-ES'
 defaultContentLanguage = 'es'
 title = 'rats.land'
 # theme = 'hugo-theme-ratsland-sans-serif'
 theme = 'hugo-theme-ratsland-bookstyle'
 enableRobotsTXT = true
 enableGitInfo = true
-Paginate = 50
 copyright = 'Esta obra está bajo una Licencia Creative Commons BY-SA-4.0. Y el código HTML y CSS bajo la GNU GPL v3.'
-rssLimit = 15
+
+# Sustituye a la antigua clave `Paginate` (deprecada en Hugo v0.128.0 y ya eliminada).
+[pagination]
+  pagerSize = 50
+
+# Sustituye a la antigua clave `rssLimit` (deprecada en favor de [services.rss]).
+[services.rss]
+  limit = 15
 
 [markup.goldmark.renderer]
 unsafe = true
-
-[author]
-  name = 'Inoro'
 
 [Params]
   webRepo = 'https://github.com/1noro/rats.land'
@@ -26,9 +30,16 @@ unsafe = true
   pgpPubKey = 'https://recordratla-public-res.s3.eu-south-2.amazonaws.com/publickey.ppuubblliicc%40protonmail.com.asc'
   articleDefaultImage = 'images/article_default_img_peach.jpg'
 
+  # El antiguo bloque raíz [author] / Site.Author quedó deprecado en Hugo
+  # v0.124.0. Ahora el autor vive bajo params y se accede vía
+  # .Site.Params.author.name en las plantillas.
+  [params.author]
+    name = 'Inoro'
+
 [languages]
   [languages.es]
-    languageName = 'Spanish'
+    # `languageName` quedó deprecada en Hugo v0.158.0; su sustituta es `label`.
+    label = 'Spanish'
     weight = 1
 
 [sitemap]

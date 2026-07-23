@@ -13,7 +13,7 @@
 		</div>
 		{{ if in .Permalink "/post/" }}
 		<div class="post__meta">
-			<span class="post__byline">{{ with .Params.author }}<a href="/{{ . | urlize }}">{{ . }}</a>{{ else }}<a href="/{{ .Site.Author.name | urlize }}">{{ .Site.Author.name }}</a>{{ end }}</span> · <time datetime="{{ .Date.Format "2006-01-02T15:04:05-07:00" }}">{{ .Date | time.Format ":date_long" }}</time><br><span class="post__tags" aria-label="Etiquetas">{{ range (.GetTerms "tags") }}&nbsp;<a href="{{.RelPermalink}}">{{ .LinkTitle }}</a>&nbsp;{{end}}</span>
+			<span class="post__byline">{{ with .Params.author }}<a href="/{{ . | urlize }}">{{ . }}</a>{{ else }}<a href="/{{ .Site.Params.author.name | urlize }}">{{ .Site.Params.author.name }}</a>{{ end }}</span> · <time datetime="{{ .Date.Format "2006-01-02T15:04:05-07:00" }}">{{ .Date | time.Format ":date_long" }}</time><br><span class="post__tags" aria-label="Etiquetas">{{ range (.GetTerms "tags") }}&nbsp;<a href="{{.RelPermalink}}">{{ .LinkTitle }}</a>&nbsp;{{end}}</span>
 		</div>
 		{{ end }}
 		{{ if and .Params.summary (not (eq .Params.displaySummary false)) }}

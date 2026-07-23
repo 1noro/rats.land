@@ -10,6 +10,26 @@ Además, esto viene porque ahora me apetece hacer una web, me apetece hacer algo
 
 Intentaré cumplir esta visión en la medida de lo posible y no parar de sentir curiosidad por cosas nuevas.
 
+## Desarrollo local
+
+La web se compila con **Hugo v0.164.0 (edición _extended_)** dentro de un
+contenedor Docker, de forma que el build es reproducible y no hace falta
+instalar Hugo en la máquina: sólo se necesita Docker.
+
+La versión de Hugo está fijada en la imagen `infra/Dockerfile` y toda la
+operativa se maneja con el `Makefile` de la raíz (autodescriptivo):
+
+```console
+$ make            # lista todos los targets disponibles
+$ make server     # servidor de desarrollo con recarga en vivo (http://localhost:1313)
+$ make build      # genera el sitio estático en ./public
+$ make new CONTENT=post/mi-post.md   # crea una entrada nueva
+$ make clean      # borra public/ y resources/
+```
+
+Variables sobreescribibles, por ejemplo: `make server PORT=8080` o
+`make build HUGO_VERSION=0.165.0`.
+
 ## Temas de HUGO que me gustan
 
 - https://themes.gohugo.io/themes/hugo-theme-nostyleplease/
