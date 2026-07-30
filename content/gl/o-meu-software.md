@@ -32,7 +32,7 @@ algum em futuras instalações.
 ### Window Manager/Desktop Environment
 
 **gnome-shell** é o contorno de escritório que mais me gosta e estou muito
-acostumado ao seu *workflow* (sobretodo na versão 40). De todas
+acostumado ao seu *workflow* (sobretudo na versão 40). De todas
 formas estou muito interessado em provar um *tiling window manager* estilo
 **dwm** ou **i3** no que seja capaz de lembrar todos os seus comandos.
 
