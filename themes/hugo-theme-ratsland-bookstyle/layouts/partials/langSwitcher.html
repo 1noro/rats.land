@@ -30,7 +30,7 @@
     {{- if $i }}&nbsp;&middot;&nbsp;{{ end -}}
     {{- $lang := $site.Language.Lang -}}
     {{- if eq $lang $current -}}
-        <span class="langNav__current" lang="{{ $lang }}" aria-current="true">{{ $lang }}</span>
+        <span class="langNav__current" lang="{{ $lang }}" aria-current="page">{{ $lang }}</span>
     {{- else -}}
         <a href="{{ index $byLang $lang | default $site.Home.RelPermalink }}" hreflang="{{ $lang }}" lang="{{ $lang }}" aria-label="{{ i18n "langSwitchTo" }} {{ $site.Language.Label | lower }}">{{ $lang }}</a>
     {{- end -}}
