@@ -48,8 +48,21 @@ DOCKER_SERVE = docker run --rm --interactive $(TTY) \
 	--entrypoint hugo \
 	$(IMAGE)
 
+# Igual que DOCKER_RUN pero propagando las credenciales de AWS para `hugo deploy`.
+DOCKER_DEPLOY = docker run --rm --interactive $(TTY) \
+	--user $(UID):$(GID) \
+	--volume "$(ROOT):/src" \
+	--workdir /src \
+	--env HOME=/tmp \
+	--env AWS_ACCESS_KEY_ID \
+	--env AWS_SECRET_ACCESS_KEY \
+	--env AWS_SESSION_TOKEN \
+	--env AWS_DEFAULT_REGION \
+	--entrypoint hugo \
+	$(IMAGE)
+
 .DEFAULT_GOAL := help
-.PHONY: help image build server serve drafts new clean version config deploy shell pull
+.PHONY: help image build server serve drafts new clean version config deploy deploy-dry shell pull
 
 # -----------------------------------------------------------------------------
 help: ## Muestra esta ayuda
@@ -70,20 +83,26 @@ image: ## Construye la imagen Docker con la versión de Hugo fijada (si falta)
 		docker build --build-arg HUGO_VERSION=$(HUGO_VERSION) -t $(IMAGE) infra; \
 	}
 
+# `--printI18nWarnings` avisa de las claves de traducción que falten. Sin él,
+# una clave ausente en i18n/gl.toml se renderiza como cadena vacía en silencio.
 build: image ## Compila el sitio estático de producción en ./public
-	$(DOCKER_RUN) --gc --minify --cleanDestinationDir
+	$(DOCKER_RUN) --gc --minify --cleanDestinationDir --printI18nWarnings
 	@echo ">> Sitio generado en ./public"
 
 server: image ## Servidor de desarrollo con recarga en vivo (puerto PORT, por defecto 1313)
-	$(DOCKER_SERVE) server --bind 0.0.0.0 --port $(PORT)
+	$(DOCKER_SERVE) server --bind 0.0.0.0 --port $(PORT) --printI18nWarnings
 
 serve: server ## Alias de `server`
 
 drafts: image ## Como `server` pero incluye borradores y contenido futuro
 	$(DOCKER_SERVE) server --bind 0.0.0.0 --port $(PORT) \
-		--buildDrafts --buildFuture --disableFastRender
+		--buildDrafts --buildFuture --disableFastRender --printI18nWarnings
 
-new: image ## Crea contenido nuevo: make new CONTENT=post/mi-post.md
+# Con `contentDir` por idioma, `hugo new` siempre escribe en el contentDir del
+# idioma por defecto (content/es). El flag --contentDir NO lo cambia: la
+# configuración por idioma tiene prioridad. Para crear contenido gallego hay
+# que crear el fichero a mano en content/gl/ (ver README).
+new: image ## Crea contenido nuevo en content/es/: make new CONTENT=post/mi-post.md
 	@test -n "$(CONTENT)" || { echo "Uso: make new CONTENT=post/mi-post.md"; exit 1; }
 	$(DOCKER_RUN) new content $(CONTENT)
 
@@ -94,17 +113,13 @@ config: image ## Vuelca la configuración efectiva de Hugo (útil para depurar)
 	$(DOCKER_RUN) config
 
 deploy: build ## Publica en S3/CloudFront (requiere credenciales AWS en el entorno)
-	docker run --rm --interactive $(TTY) \
-		--user $(UID):$(GID) \
-		--volume "$(ROOT):/src" \
-		--workdir /src \
-		--env HOME=/tmp \
-		--env AWS_ACCESS_KEY_ID \
-		--env AWS_SECRET_ACCESS_KEY \
-		--env AWS_SESSION_TOKEN \
-		--env AWS_DEFAULT_REGION \
-		--entrypoint hugo \
-		$(IMAGE) deploy
+	$(DOCKER_DEPLOY) deploy
+
+# `hugo deploy` borra los ficheros remotos que ya no existen en local y se
+# detiene si tuviese que borrar más de 256. Conviene revisar el diff antes de
+# publicar un cambio grande (una migración de contenido, un idioma nuevo...).
+deploy-dry: build ## Muestra qué haría `deploy` sin tocar S3 ni CloudFront
+	$(DOCKER_DEPLOY) deploy --dryRun
 
 shell: image ## Abre una shell interactiva dentro del contenedor
 	docker run --rm --interactive --tty \

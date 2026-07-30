@@ -1,4 +1,4 @@
 <p id="fnt-{{ .Get "number" }}" class="footnote__text">
-    <!-- <span>{{ .Get "number" }}.</span> <a class="noDecoration" href="#fnr-{{ .Get "number" }}" title="Volver arriba">↑</a> {{ .Inner | markdownify }} -->
-    <span>{{ .Get "number" }}.</span> <a class="noDecoration" href="#fnr-{{ .Get "number" }}" title="Volver arriba">^</a> {{ .Inner | markdownify }}
+    <!-- <span>{{ .Get "number" }}.</span> <a class="noDecoration" href="#fnr-{{ .Get "number" }}" title="{{ i18n "backToTop" }}">↑</a> {{ .Inner | markdownify }} -->
+    <span>{{ .Get "number" }}.</span> <a class="noDecoration" href="#fnr-{{ .Get "number" }}" title="{{ i18n "backToTop" }}">^</a> {{ .Inner | markdownify }}
 </p>

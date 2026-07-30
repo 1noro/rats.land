@@ -6,6 +6,9 @@ tags: ["sueños"]
 summary: "Transcripción de una pesadilla que tuve la noche del 29 de marzo de 2023."
 displaySummary: false
 image: "silueta-hombre-azul-2.png"
+# La traducción gallega vive en el bundle atraves-da-janela/; al no compartir
+# basename, Hugo sólo las enlaza como traducciones vía este translationKey.
+translationKey: "a-traves-de-la-ventana"
 ---
 
 Como en [veces anteriores]({{< relref "/tags/sueños" >}}), hoy os quiero relatar una pesadilla que tuve la noche del 29 de marzo de 2023. Sabéis que suelo escribir los sueños que soy capaz de recordar en una especie de diario que tengo, pero lo cierto es que llevaba una buena temporada sin hacerlo debido a que no conseguía acordarme de ninguno. Desde el 29 hasta hoy no he vuelto a recordar ninguno, pero tened por seguro que la pesadilla que os voy a narrar a continuación se quedó grabada a fuego en mi memoria.

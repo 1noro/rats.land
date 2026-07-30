@@ -2,7 +2,7 @@
 <article class="post post--index">
     <div class="container post__entryContent">
         <h1>404</h1>
-        <p>La página que buscas no existe. Puedes volver a la <a href="/">página principal</a>.</p>
+        <p>{{ i18n "notFoundText" }} <a href="{{ .Site.Home.RelPermalink }}">{{ i18n "notFoundHomeLink" }}</a>.</p>
     </div>
 </article>
 {{end}}

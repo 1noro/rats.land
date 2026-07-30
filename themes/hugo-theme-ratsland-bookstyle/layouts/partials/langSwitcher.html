@@ -1,0 +1,38 @@
+{{/*
+    Selector de idioma, en línea.
+
+    No emite su propio <nav>: está pensado para ir dentro del nav de enlaces
+    útiles del footer, porque cambiar de idioma es una forma más de moverse por
+    la página. Por eso tampoco lleva aria-label de landmark; la accesibilidad la
+    dan `lang`/`hreflang` (que le dicen al lector de pantalla el idioma del
+    destino) más un aria-label por enlace.
+
+    Se muestran los dos idiomas, no sólo el otro: así se ve que «es» y «gl» son
+    un par de opciones y cuál está activa, en lugar de una etiqueta suelta y
+    ambigua. El idioma actual es un <span>, no un enlace.
+
+    Tiene que funcionar también en páginas SIN traducir (la mayoría de las
+    publicaciones sólo existen en castellano), así que no basta con recorrer
+    `.Translations`: eso dejaría el selector vacío justo en esas páginas. En su
+    lugar se recorren todos los sitios del proyecto y, para cada idioma, se usa
+    la traducción de esta página si existe y la portada de ese idioma si no.
+
+    Se usa `hugo.Sites` y no `.Site.Languages` ni `.Sites`: ambos quedaron
+    deprecados en Hugo v0.156.0 y ensuciarían el build con avisos.
+*/}}
+{{- $byLang := dict -}}
+{{- range .Translations -}}
+    {{- $byLang = merge $byLang (dict .Language.Lang .RelPermalink) -}}
+{{- end -}}
+{{- $current := .Site.Language.Lang -}}
+<span class="langNav">
+{{- range $i, $site := hugo.Sites -}}
+    {{- if $i }}&nbsp;&middot;&nbsp;{{ end -}}
+    {{- $lang := $site.Language.Lang -}}
+    {{- if eq $lang $current -}}
+        <span class="langNav__current" lang="{{ $lang }}" aria-current="true">{{ $lang }}</span>
+    {{- else -}}
+        <a href="{{ index $byLang $lang | default $site.Home.RelPermalink }}" hreflang="{{ $lang }}" lang="{{ $lang }}" aria-label="{{ i18n "langSwitchTo" }} {{ $site.Language.Label | lower }}">{{ $lang }}</a>
+    {{- end -}}
+{{- end -}}
+</span>
