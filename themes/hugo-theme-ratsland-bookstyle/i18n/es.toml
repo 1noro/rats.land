@@ -1,0 +1,61 @@
+# Cadenas de la interfaz del tema en castellano.
+#
+# Las tablas i18n se fusionan por clave, así que un i18n/es.toml en la raíz del
+# proyecto puede sobrescribir claves concretas sin duplicar este fichero.
+#
+# Si falta una clave, Hugo NO falla: cae al idioma por defecto y, si tampoco
+# está, devuelve cadena vacía. En silencio. Usa `--printI18nWarnings` (ya
+# incluido en los targets `build` y `server` del Makefile) para detectarlo.
+#
+# Se usan cadenas literales de TOML (comillas simples) para poder incluir
+# comillas dobles sin escapes.
+
+# --- baseof.html ---
+ariaHeader = 'Cabecera'
+ariaMain = 'Contenido principal'
+ariaFooter = 'Licencias, contactos y más enlaces'
+
+# --- header.html ---
+ariaPerfectLink = 'El enlace perfecto'
+siteQuote = '"Y el pobre Masson se hundió en la negrura de la muerte, con los locos chillidos de las ratas taladrándole los oídos"'
+ariaNavSections = 'Enlaces a las secciones de la página'
+navArchive = 'archivo'
+ariaNavArchive = 'El archivo de páginas ordenadas por fecha.'
+navFaq = 'faq'
+ariaNavFaq = 'Preguntas frecuentes sobre esta página (faq).'
+navRss = 'rss'
+ariaNavRss = 'Feed RSS para estar al tanto de las novedades de esta web.'
+ariaHome = 'Volver al inicio.'
+
+# --- footer.html ---
+ariaContact = 'Enlaces de contacto'
+ariaGithub = 'Enlace a mi perfil de GitHub'
+ariaGitlab = 'Enlace a mi perfil de GitLab'
+ariaMastodon = 'Enlace a mi perfil de Mastodon'
+ariaMail = 'Email de contacto.'
+ariaPgp = '¡Mándame un correo cifrado con pgp!'
+ariaNavUtil = 'Enlaces útiles para moverse por la página'
+navAbout = 'sobre esta web'
+navTags = 'tags'
+ariaLicenseCc = 'Texto de la licencia Creative Commons BY-SA-4.0.'
+ariaLicenseGpl = 'Todo el código que sustenta la web está bajo la licencia GPLv3.'
+
+# --- langSwitcher.html ---
+# Se completa con el `label` del idioma destino: "Ver esta página en galego".
+langSwitchTo = 'Ver esta página en'
+
+# --- list.html ---
+tagPrefix = 'Tag:'
+
+# --- single.html ---
+ariaTags = 'Etiquetas'
+
+# --- head.html ---
+ogImageAlt = 'Imagen de portada.'
+
+# --- 404.html ---
+notFoundText = 'La página que buscas no existe. Puedes volver a la'
+notFoundHomeLink = 'página principal'
+
+# --- shortcodes/footnoteText.html ---
+backToTop = 'Volver arriba'

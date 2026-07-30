@@ -1,0 +1,54 @@
+# Cadeias da interface do tema em galego reintegrado (norma AGAL).
+#
+# Ver as notas de i18n/es.toml sobre a fusão por chave e sobre o facto de que
+# uma chave ausente devolve cadeia vazia en silêncio.
+
+# --- baseof.html ---
+ariaHeader = 'Cabeçalho'
+ariaMain = 'Conteúdo principal'
+ariaFooter = 'Licenças, contactos e mais ligações'
+
+# --- header.html ---
+ariaPerfectLink = 'A ligação perfeita'
+siteQuote = '"E o pobre Masson afundou-se na negrura da morte, com os loucos guinchos das ratas a furarem-lhe os ouvidos"'
+ariaNavSections = 'Ligações às secções da página'
+navArchive = 'arquivo'
+ariaNavArchive = 'O arquivo de páginas ordenadas por data.'
+navFaq = 'faq'
+ariaNavFaq = 'Perguntas frequentes sobre esta página (faq).'
+navRss = 'rss'
+ariaNavRss = 'Feed RSS para estar a par das novidades desta web.'
+ariaHome = 'Voltar ao início.'
+
+# --- footer.html ---
+ariaContact = 'Ligações de contacto'
+ariaGithub = 'Ligação ao meu perfil de GitHub'
+ariaGitlab = 'Ligação ao meu perfil de GitLab'
+ariaMastodon = 'Ligação ao meu perfil de Mastodon'
+ariaMail = 'Correio de contacto.'
+ariaPgp = 'Manda-me um correio cifrado com pgp!'
+ariaNavUtil = 'Ligações úteis para se mover pola página'
+navAbout = 'sobre esta web'
+navTags = 'tags'
+ariaLicenseCc = 'Texto da licença Creative Commons BY-SA-4.0.'
+ariaLicenseGpl = 'Todo o código que sustenta a web está sob a licença GPLv3.'
+
+# --- langSwitcher.html ---
+# Complementa-se com o `label` do idioma destino: "Ver esta página em castellano".
+langSwitchTo = 'Ver esta página em'
+
+# --- list.html ---
+tagPrefix = 'Tag:'
+
+# --- single.html ---
+ariaTags = 'Etiquetas'
+
+# --- head.html ---
+ogImageAlt = 'Imagem de capa.'
+
+# --- 404.html ---
+notFoundText = 'A página que procuras não existe. Podes voltar à'
+notFoundHomeLink = 'página principal'
+
+# --- shortcodes/footnoteText.html ---
+backToTop = 'Voltar acima'

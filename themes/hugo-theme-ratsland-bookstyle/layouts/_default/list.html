@@ -3,7 +3,7 @@
 	<header class="container">
 		<div class="post__header">
 			{{ if eq .Kind "term" }}
-			<h1 class="post__title">Tag: {{ .Title }}</h1>
+			<h1 class="post__title">{{ i18n "tagPrefix" }} {{ .Title }}</h1>
 			{{ else }}
 			<h1 class="post__title">{{ .Title }}</h1>
 			{{ end }}
@@ -21,7 +21,7 @@
 			<li><a href="{{ .RelPermalink }}">{{ .Title }}</a> ({{ len .Pages }})</li>
 			{{ end }}
 		</ul>
-		{{ else if in .Permalink "/post/" }}
+		{{ else if eq .Section "post" }}
 		{{ range .Pages.GroupByDate "2006" }}
 		<!-- <h2>~ <span class="uppercase">{{ .Key }}</span> ~</h2> -->
 		<h2><span class="uppercase">{{ .Key }}</span></h2>

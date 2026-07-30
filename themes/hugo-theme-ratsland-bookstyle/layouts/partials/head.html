@@ -10,6 +10,12 @@
 <!-- Para decirle a google que la URL original es esta, y no la que se está usando -->
 <link rel="canonical" href="{{ .Page.Permalink }}">
 
+<!-- Traducciones de esta página. Se usa .AllTranslations (que INCLUYE el idioma
+     actual) porque Google espera el alternate autorreferencial. -->
+{{ range .AllTranslations -}}
+    <link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}">
+{{ end -}}
+
 <!-- Para decirle al navegador que tengo RSS -->
 <!-- <link rel="alternate" type="application/rss+xml" href="{{ "index.xml" | relURL }}" title="RSS de rats.land"> -->
 {{ range .AlternativeOutputFormats -}}
@@ -48,7 +54,7 @@
 <meta name="theme-color" content="#000000"> <!-- Para que el navegador sepa que color debe usar en el marco -->
 
 <!-- Open Graph / Facebook -->
-{{ if in .Permalink "/post/" }}
+{{ if eq .Section "post" }}
 	<meta property="og:type" content="article">
 	{{ with .Params.author }}
 		<meta property="article:author" content="{{ . }}">
@@ -63,6 +69,10 @@
 <meta property="og:url" content="{{ .Page.Permalink }}">
 <meta property="og:site_name" content="{{ .Site.Title }}">
 <meta property="og:locale" content="{{ .Site.Language.Locale }}">
+{{/* .Translations EXCLUYE el idioma actual, que es justo lo que quiere og. */}}
+{{ range .Translations -}}
+	<meta property="og:locale:alternate" content="{{ .Language.Locale }}">
+{{ end -}}
 
 {{ if not .IsHome }}
 	<meta property="og:title" content="{{ .Title }} - {{ $.Site.Title }}">
@@ -89,7 +99,7 @@
 	<meta property="twitter:image" content="{{ $imageResized.Permalink }}">
 {{ end }}
 
-<meta property="og:image:alt" content="Imagen de portada.">
+<meta property="og:image:alt" content="{{ i18n "ogImageAlt" }}">
 
 <!-- Twitter -->
 <meta name="twitter:card" content="summary_large_image">

@@ -1,13 +1,23 @@
 baseURL = 'https://rats.land/'
-# `languageCode` quedó deprecada en Hugo v0.158.0; su sustituta es `locale`.
-locale = 'es-ES'
 defaultContentLanguage = 'es'
+# El castellano se sirve en la raíz (/) y el gallego bajo /gl/. Se deja
+# explícito porque es una decisión consciente: los `aliases` de Hugo se
+# resuelven CON prefijo de idioma y el redirect automático del idioma por
+# defecto sólo cubre `/`, así que poner el castellano en /es/ dejaría todas
+# las URLs históricas en 404 sin remedio nativo.
+defaultContentLanguageInSubdir = false
 title = 'rats.land'
-# theme = 'hugo-theme-ratsland-sans-serif'
+# theme = 'hugo-theme-ratsland-sans-serif'  # OJO: sin soporte i18n
 theme = 'hugo-theme-ratsland-bookstyle'
 enableRobotsTXT = true
 enableGitInfo = true
-copyright = 'Esta obra está bajo una Licencia Creative Commons BY-SA-4.0. Y el código HTML y CSS bajo la GNU GPL v3.'
+
+# Con `enableGitInfo` el `lastmod` sale del último commit del fichero. Al mover
+# todo el contenido a content/es/ eso pondría la fecha de la migración como
+# <lastmod> de las 22 publicaciones en el sitemap; con esta cadena explícita se
+# ignora git y se usa el front matter.
+[frontmatter]
+  lastmod = ['lastmod', 'date']
 
 # Sustituye a la antigua clave `Paginate` (deprecada en Hugo v0.128.0 y ya eliminada).
 [pagination]
@@ -36,11 +46,28 @@ unsafe = true
   [params.author]
     name = 'Inoro'
 
+# Cada idioma tiene su propio `contentDir`. Son directorios hermanos, no
+# solapan (Hugo lo exige) y sustituyen por completo al montaje `content` por
+# defecto: cualquier fichero que quedase suelto en content/ sería invisible.
 [languages]
   [languages.es]
     # `languageName` quedó deprecada en Hugo v0.158.0; su sustituta es `label`.
-    label = 'Spanish'
+    label = 'Castellano'
+    # `languageCode` quedó deprecada en Hugo v0.158.0; su sustituta es `locale`.
+    locale = 'es-ES'
     weight = 1
+    contentDir = 'content/es'
+    copyright = 'Esta obra está bajo una Licencia Creative Commons BY-SA-4.0. Y el código HTML y CSS bajo la GNU GPL v3.'
+
+  # Gallego reintegrado (norma AGAL). Se usa el código ISO 639-1 `gl` porque es
+  # un tag BCP-47 válido y, por tanto, un `hreflang` que Google respeta; la
+  # norma reintegrada se refleja en el texto, no en el código.
+  [languages.gl]
+    label = 'Galego'
+    locale = 'gl-ES'
+    weight = 2
+    contentDir = 'content/gl'
+    copyright = 'Esta obra está sob uma Licença Creative Commons BY-SA-4.0. E o código HTML e CSS sob a GNU GPL v3.'
 
 [sitemap]
   changefreq = 'weekly'
@@ -110,7 +137,10 @@ gzip = false
 
 [[deployment.matchers]]
 # Set custom content type for /sitemap.xml
-pattern = "^(sitemap|index)\\.xml$"
+# El patrón casa contra la ruta local, así que sin el `(^|/)` los feeds y
+# sitemaps por idioma (gl/index.xml, gl/sitemap.xml) se quedarían fuera y
+# perderían el contentType y el gzip.
+pattern = "(^|/)(sitemap|index)\\.xml$"
 contentType = "application/xml"
 gzip = true
 

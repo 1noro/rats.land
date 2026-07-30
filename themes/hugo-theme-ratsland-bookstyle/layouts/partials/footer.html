@@ -1,20 +1,22 @@
-<nav id="contacto" aria-label="Enlaces de contacto">
+<nav id="contacto" aria-label="{{ i18n "ariaContact" }}">
     <p>
-        <a href="{{ .Site.Params.github }}" aria-label="Enlace a mi perfil de GitHub">github</a> &middot; 
-        <a href="{{ .Site.Params.gitlab }}" aria-label="Enlace a mi perfil de GitLab">gitlab</a> &middot; 
-        <!-- <a href="{{ .Site.Params.mastodon }}" aria-label="Enlace a mi perfil de Mastodon">mastodon</a> &middot;  -->
-        <a href="mailto:{{ .Site.Params.email }}" aria-label="Email de contacto.">mail</a> (<a href="{{ .Site.Params.pgpPubKey }}" aria-label="¡Mándame un correo cifrado con pgp!">pgp</a>)
+        <a href="{{ .Site.Params.github }}" aria-label="{{ i18n "ariaGithub" }}">github</a> &middot;
+        <a href="{{ .Site.Params.gitlab }}" aria-label="{{ i18n "ariaGitlab" }}">gitlab</a> &middot;
+        <!-- <a href="{{ .Site.Params.mastodon }}" aria-label="{{ i18n "ariaMastodon" }}">mastodon</a> &middot;  -->
+        <a href="mailto:{{ .Site.Params.email }}" aria-label="{{ i18n "ariaMail" }}">mail</a> (<a href="{{ .Site.Params.pgpPubKey }}" aria-label="{{ i18n "ariaPgp" }}">pgp</a>)
     </p>
 </nav>
 
-<nav aria-label="Enlaces útiles para moverse por la página">
+<nav aria-label="{{ i18n "ariaNavUtil" }}">
     <p>
-        <a href="{{ "info" | relURL }}">sobre esta web</a>&nbsp;&nbsp;&nbsp;<a href="{{ "faq" | relURL }}">faq</a>&nbsp;&nbsp;&nbsp;<a href="{{ "post" | relURL }}">archivo</a>&nbsp;&nbsp;&nbsp;<a href="{{ "tags" | relURL }}">tags</a>
+        <a href="{{ "info" | relLangURL }}">{{ i18n "navAbout" }}</a>&nbsp;&nbsp;&nbsp;<a href="{{ "faq" | relLangURL }}">{{ i18n "navFaq" }}</a>&nbsp;&nbsp;&nbsp;<a href="{{ "post" | relLangURL }}">{{ i18n "navArchive" }}</a>&nbsp;&nbsp;&nbsp;<a href="{{ "tags" | relLangURL }}">{{ i18n "navTags" }}</a>&nbsp;&nbsp;&nbsp;{{ partial "langSwitcher.html" . }}
     </p>
 </nav>
 
 <div class="siteFooter__secondary">
     <p class="siteFooter__secondary__text">
-        &copy; {{ dateFormat "2006" now }} Inoro <a rel="license" href="{{ "LICENSE.CC-BY-SA-4.0.txt" | relURL }}" aria-label="Texto de la licencia Creative Commons BY-SA-4.0.">CC BY-SA-4.0</a> & <a rel="license" href="{{ "LICENSE.GPL-3.0.txt" | relURL }}" aria-label="Todo el código que sustenta la web está bajo la licencia GPLv3.">GPLv3</a>
+        {{/* Los dos .txt viven en static/ y son neutros al idioma: aquí se
+             mantiene `relURL` a propósito, `relLangURL` los rompería. */}}
+        &copy; {{ dateFormat "2006" now }} {{ .Site.Params.author.name }} <a rel="license" href="{{ "LICENSE.CC-BY-SA-4.0.txt" | relURL }}" aria-label="{{ i18n "ariaLicenseCc" }}">CC BY-SA-4.0</a> & <a rel="license" href="{{ "LICENSE.GPL-3.0.txt" | relURL }}" aria-label="{{ i18n "ariaLicenseGpl" }}">GPLv3</a>
     </p>
 </div>

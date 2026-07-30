@@ -214,6 +214,17 @@ ul {
     margin: 0.2rem auto;
 }
 
+// Selector de idioma, en línea en el nav de enlaces útiles del footer. Hereda
+// el tamaño y el estilo de los demás enlaces del footer; lo único propio es el
+// idioma activo, que se distingue en gris y sin subrayado (no es un enlace).
+.langNav {
+    white-space: nowrap;
+
+    &__current {
+        color: $_grey;
+    }
+}
+
 .container {
     max-width: $text-max-width;
     margin: 0 auto;

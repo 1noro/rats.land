@@ -5,6 +5,9 @@ draft: false
 summary: "Listado de programas que componen mi workflow."
 displaySummary: false
 image: "images/gnu-1300.jpg"
+# La traducción gallega vive en o-meu-software.md; al no compartir basename,
+# Hugo sólo las enlaza como traducciones a través de este translationKey.
+translationKey: "mi-software"
 ---
 
 <!-- todo: actualizar, no refleja la realidad -->
